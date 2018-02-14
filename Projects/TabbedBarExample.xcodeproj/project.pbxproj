@@ -14,6 +14,12 @@
 		0A2B5CED2034CBAE000D7B72 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE52034CBAD000D7B72 /* TaskDetailViewController.swift */; };
 		0A2B5CEE2034CBAE000D7B72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE72034CBAD000D7B72 /* LoginViewController.swift */; };
 		0A2B5CEF2034CBAE000D7B72 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE82034CBAD000D7B72 /* RegisterViewController.swift */; };
+		0A2B5CF22034CE4B000D7B72 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CF12034CE4B000D7B72 /* APIManager.swift */; };
+		0A2B5D4E2034D32B000D7B72 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5D4D2034D32B000D7B72 /* SwiftyJSON.swift */; };
+		0A2B5D522034DC9B000D7B72 /* BoardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5D512034DC9B000D7B72 /* BoardsModel.swift */; };
+		0A2B5D542034DCB2000D7B72 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5D532034DCB2000D7B72 /* ListModel.swift */; };
+		0A2B5D562034DCC3000D7B72 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5D552034DCC3000D7B72 /* TaskModel.swift */; };
+		0A2B5D582034E309000D7B72 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0A2B5D572034E309000D7B72 /* Podfile */; };
 		77943695202E427A00E77B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77943694202E427A00E77B71 /* Assets.xcassets */; };
 		779436A3202E427B00E77B71 /* TabbedBarExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779436A2202E427B00E77B71 /* TabbedBarExampleTests.swift */; };
 		779436AE202E427B00E77B71 /* TabbedBarExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779436AD202E427B00E77B71 /* TabbedBarExampleUITests.swift */; };
@@ -57,6 +63,12 @@
 		0A2B5CE52034CBAD000D7B72 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		0A2B5CE72034CBAD000D7B72 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0A2B5CE82034CBAD000D7B72 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0A2B5CF12034CE4B000D7B72 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		0A2B5D4D2034D32B000D7B72 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		0A2B5D512034DC9B000D7B72 /* BoardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsModel.swift; sourceTree = "<group>"; };
+		0A2B5D532034DCB2000D7B72 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		0A2B5D552034DCC3000D7B72 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		0A2B5D572034E309000D7B72 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		77943688202E427A00E77B71 /* TabbedBarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbedBarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77943694202E427A00E77B71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77943699202E427A00E77B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,9 +139,36 @@
 			path = LoginRegisterViewControllers;
 			sourceTree = "<group>";
 		};
+		0A2B5CF02034CE30000D7B72 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				0A2B5CF12034CE4B000D7B72 /* APIManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		0A2B5D4C2034D32B000D7B72 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				0A2B5D4D2034D32B000D7B72 /* SwiftyJSON.swift */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		0A2B5D502034DC67000D7B72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A2B5D512034DC9B000D7B72 /* BoardsModel.swift */,
+				0A2B5D532034DCB2000D7B72 /* ListModel.swift */,
+				0A2B5D552034DCC3000D7B72 /* TaskModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		7794367F202E427A00E77B71 = {
 			isa = PBXGroup;
 			children = (
+				0A2B5D572034E309000D7B72 /* Podfile */,
 				7794368A202E427A00E77B71 /* TabbedBarExample */,
 				779436A1202E427B00E77B71 /* TabbedBarExampleTests */,
 				779436AC202E427B00E77B71 /* TabbedBarExampleUITests */,
@@ -150,6 +189,9 @@
 		7794368A202E427A00E77B71 /* TabbedBarExample */ = {
 			isa = PBXGroup;
 			children = (
+				0A2B5D502034DC67000D7B72 /* Models */,
+				0A2B5D4C2034D32B000D7B72 /* SwiftyJSON */,
+				0A2B5CF02034CE30000D7B72 /* APIManager */,
 				779436C7202E490900E77B71 /* AppDelegate */,
 				779436C9202E490900E77B71 /* StoryboardViews */,
 				779436C1202E490900E77B71 /* ViewControllers */,
@@ -333,6 +375,7 @@
 				779436D8202E498A00E77B71 /* BoardsTableViewCell.xib in Resources */,
 				779436D2202E490900E77B71 /* LaunchScreen.storyboard in Resources */,
 				779436E0202E4A1500E77B71 /* TaskDetailView.xib in Resources */,
+				0A2B5D582034E309000D7B72 /* Podfile in Resources */,
 				779436DC202E49DA00E77B71 /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +401,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A2B5CF22034CE4B000D7B72 /* APIManager.swift in Sources */,
+				0A2B5D542034DCB2000D7B72 /* ListModel.swift in Sources */,
+				0A2B5D562034DCC3000D7B72 /* TaskModel.swift in Sources */,
 				0A2B5CEE2034CBAE000D7B72 /* LoginViewController.swift in Sources */,
 				779436D1202E490900E77B71 /* AppDelegate.swift in Sources */,
 				779436DB202E49DA00E77B71 /* ListTableViewCell.swift in Sources */,
@@ -369,8 +415,10 @@
 				779436D7202E498A00E77B71 /* BoardsTableViewCell.swift in Sources */,
 				779436CC202E490900E77B71 /* FifthViewController.swift in Sources */,
 				0A2B5CE92034CBAE000D7B72 /* AddBoardViewController.swift in Sources */,
+				0A2B5D522034DC9B000D7B72 /* BoardsModel.swift in Sources */,
 				0A2B5CED2034CBAE000D7B72 /* TaskDetailViewController.swift in Sources */,
 				779436DE202E4A0300E77B71 /* TaskDetailView.swift in Sources */,
+				0A2B5D4E2034D32B000D7B72 /* SwiftyJSON.swift in Sources */,
 				0A2B5CEA2034CBAE000D7B72 /* AddTaskViewController.swift in Sources */,
 				0A2B5CEB2034CBAE000D7B72 /* BoardsViewController.swift in Sources */,
 			);
