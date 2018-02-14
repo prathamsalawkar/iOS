@@ -40,7 +40,7 @@ class BoardsViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     @objc func rightBarItemPressed(){
-        
+        self.performSegue(withIdentifier: "createBoard", sender: self) 
     }
     
     
