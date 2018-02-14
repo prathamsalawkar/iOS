@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A2B5CD920349CF6000D7B72 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CD820349CF6000D7B72 /* AddTaskViewController.swift */; };
-		0A2B5CDB20349FD5000D7B72 /* AddBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CDA20349FD5000D7B72 /* AddBoardViewController.swift */; };
-		0A2B5CDD2034AF9C000D7B72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CDC2034AF9C000D7B72 /* LoginViewController.swift */; };
-		0A2B5CDF2034AFAC000D7B72 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CDE2034AFAC000D7B72 /* RegisterViewController.swift */; };
+		0A2B5CE92034CBAE000D7B72 /* AddBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE12034CBAD000D7B72 /* AddBoardViewController.swift */; };
+		0A2B5CEA2034CBAE000D7B72 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE22034CBAD000D7B72 /* AddTaskViewController.swift */; };
+		0A2B5CEB2034CBAE000D7B72 /* BoardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE32034CBAD000D7B72 /* BoardsViewController.swift */; };
+		0A2B5CEC2034CBAE000D7B72 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE42034CBAD000D7B72 /* ListViewController.swift */; };
+		0A2B5CED2034CBAE000D7B72 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE52034CBAD000D7B72 /* TaskDetailViewController.swift */; };
+		0A2B5CEE2034CBAE000D7B72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE72034CBAD000D7B72 /* LoginViewController.swift */; };
+		0A2B5CEF2034CBAE000D7B72 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE82034CBAD000D7B72 /* RegisterViewController.swift */; };
 		77943695202E427A00E77B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77943694202E427A00E77B71 /* Assets.xcassets */; };
 		779436A3202E427B00E77B71 /* TabbedBarExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779436A2202E427B00E77B71 /* TabbedBarExampleTests.swift */; };
 		779436AE202E427B00E77B71 /* TabbedBarExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779436AD202E427B00E77B71 /* TabbedBarExampleUITests.swift */; };
 		779436CC202E490900E77B71 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779436C2202E490900E77B71 /* FifthViewController.swift */; };
-		779436CD202E490900E77B71 /* BoardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779436C3202E490900E77B71 /* BoardsViewController.swift */; };
 		779436CE202E490900E77B71 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779436C4202E490900E77B71 /* FourthViewController.swift */; };
 		779436CF202E490900E77B71 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779436C5202E490900E77B71 /* SecondViewController.swift */; };
 		779436D0202E490900E77B71 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779436C6202E490900E77B71 /* ThirdViewController.swift */; };
@@ -28,8 +30,6 @@
 		779436DC202E49DA00E77B71 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 779436DA202E49DA00E77B71 /* ListTableViewCell.xib */; };
 		779436DE202E4A0300E77B71 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779436DD202E4A0300E77B71 /* TaskDetailView.swift */; };
 		779436E0202E4A1500E77B71 /* TaskDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 779436DF202E4A1500E77B71 /* TaskDetailView.xib */; };
-		779436E2202E52F600E77B71 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779436E1202E52F600E77B71 /* ListViewController.swift */; };
-		779436E4202E533300E77B71 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779436E3202E533300E77B71 /* TaskDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +50,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A2B5CD820349CF6000D7B72 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
-		0A2B5CDA20349FD5000D7B72 /* AddBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBoardViewController.swift; sourceTree = "<group>"; };
-		0A2B5CDC2034AF9C000D7B72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		0A2B5CDE2034AFAC000D7B72 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0A2B5CE12034CBAD000D7B72 /* AddBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBoardViewController.swift; sourceTree = "<group>"; };
+		0A2B5CE22034CBAD000D7B72 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		0A2B5CE32034CBAD000D7B72 /* BoardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardsViewController.swift; sourceTree = "<group>"; };
+		0A2B5CE42034CBAD000D7B72 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		0A2B5CE52034CBAD000D7B72 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
+		0A2B5CE72034CBAD000D7B72 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0A2B5CE82034CBAD000D7B72 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		77943688202E427A00E77B71 /* TabbedBarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbedBarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77943694202E427A00E77B71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77943699202E427A00E77B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,7 +67,6 @@
 		779436AD202E427B00E77B71 /* TabbedBarExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedBarExampleUITests.swift; sourceTree = "<group>"; };
 		779436AF202E427B00E77B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		779436C2202E490900E77B71 /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
-		779436C3202E490900E77B71 /* BoardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardsViewController.swift; sourceTree = "<group>"; };
 		779436C4202E490900E77B71 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		779436C5202E490900E77B71 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		779436C6202E490900E77B71 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -77,8 +79,6 @@
 		779436DA202E49DA00E77B71 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		779436DD202E4A0300E77B71 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		779436DF202E4A1500E77B71 /* TaskDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskDetailView.xib; sourceTree = "<group>"; };
-		779436E1202E52F600E77B71 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		779436E3202E533300E77B71 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +106,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A2B5CE02034CBAD000D7B72 /* FirstTabBarViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A2B5CE12034CBAD000D7B72 /* AddBoardViewController.swift */,
+				0A2B5CE22034CBAD000D7B72 /* AddTaskViewController.swift */,
+				0A2B5CE32034CBAD000D7B72 /* BoardsViewController.swift */,
+				0A2B5CE42034CBAD000D7B72 /* ListViewController.swift */,
+				0A2B5CE52034CBAD000D7B72 /* TaskDetailViewController.swift */,
+			);
+			path = FirstTabBarViewControllers;
+			sourceTree = "<group>";
+		};
+		0A2B5CE62034CBAD000D7B72 /* LoginRegisterViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A2B5CE72034CBAD000D7B72 /* LoginViewController.swift */,
+				0A2B5CE82034CBAD000D7B72 /* RegisterViewController.swift */,
+			);
+			path = LoginRegisterViewControllers;
+			sourceTree = "<group>";
+		};
 		7794367F202E427A00E77B71 = {
 			isa = PBXGroup;
 			children = (
@@ -160,17 +181,12 @@
 		779436C1202E490900E77B71 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				779436C3202E490900E77B71 /* BoardsViewController.swift */,
-				779436E1202E52F600E77B71 /* ListViewController.swift */,
-				779436E3202E533300E77B71 /* TaskDetailViewController.swift */,
+				0A2B5CE02034CBAD000D7B72 /* FirstTabBarViewControllers */,
+				0A2B5CE62034CBAD000D7B72 /* LoginRegisterViewControllers */,
 				779436C5202E490900E77B71 /* SecondViewController.swift */,
 				779436C2202E490900E77B71 /* FifthViewController.swift */,
 				779436C4202E490900E77B71 /* FourthViewController.swift */,
 				779436C6202E490900E77B71 /* ThirdViewController.swift */,
-				0A2B5CD820349CF6000D7B72 /* AddTaskViewController.swift */,
-				0A2B5CDA20349FD5000D7B72 /* AddBoardViewController.swift */,
-				0A2B5CDC2034AF9C000D7B72 /* LoginViewController.swift */,
-				0A2B5CDE2034AFAC000D7B72 /* RegisterViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -342,21 +358,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A2B5CDD2034AF9C000D7B72 /* LoginViewController.swift in Sources */,
+				0A2B5CEE2034CBAE000D7B72 /* LoginViewController.swift in Sources */,
 				779436D1202E490900E77B71 /* AppDelegate.swift in Sources */,
-				0A2B5CDF2034AFAC000D7B72 /* RegisterViewController.swift in Sources */,
-				0A2B5CD920349CF6000D7B72 /* AddTaskViewController.swift in Sources */,
 				779436DB202E49DA00E77B71 /* ListTableViewCell.swift in Sources */,
+				0A2B5CEC2034CBAE000D7B72 /* ListViewController.swift in Sources */,
 				779436CF202E490900E77B71 /* SecondViewController.swift in Sources */,
 				779436CE202E490900E77B71 /* FourthViewController.swift in Sources */,
+				0A2B5CEF2034CBAE000D7B72 /* RegisterViewController.swift in Sources */,
 				779436D0202E490900E77B71 /* ThirdViewController.swift in Sources */,
 				779436D7202E498A00E77B71 /* BoardsTableViewCell.swift in Sources */,
-				779436E4202E533300E77B71 /* TaskDetailViewController.swift in Sources */,
 				779436CC202E490900E77B71 /* FifthViewController.swift in Sources */,
-				779436CD202E490900E77B71 /* BoardsViewController.swift in Sources */,
-				0A2B5CDB20349FD5000D7B72 /* AddBoardViewController.swift in Sources */,
-				779436E2202E52F600E77B71 /* ListViewController.swift in Sources */,
+				0A2B5CE92034CBAE000D7B72 /* AddBoardViewController.swift in Sources */,
+				0A2B5CED2034CBAE000D7B72 /* TaskDetailViewController.swift in Sources */,
 				779436DE202E4A0300E77B71 /* TaskDetailView.swift in Sources */,
+				0A2B5CEA2034CBAE000D7B72 /* AddTaskViewController.swift in Sources */,
+				0A2B5CEB2034CBAE000D7B72 /* BoardsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

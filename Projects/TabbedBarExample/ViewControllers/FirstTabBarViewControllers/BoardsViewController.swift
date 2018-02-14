@@ -20,12 +20,17 @@ class BoardsViewController: UIViewController,UITableViewDelegate,UITableViewData
         uiTableView.separatorStyle = UITableViewCellSeparatorStyle.none
         addRightBarItem()
         // Do any additional setup after loading the view.
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
      override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.title = "Boards"
-        self.navigationController?.navigationBar.backgroundColor = UIColor.blue
+        self.navigationController?.topViewController?.title = "Boards";
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+       // self.navigationController?.navigationBar.topItem?.title = "Boards";
+      //  self.navigationController?.navigationBar.backgroundColor = UIColor.blue
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,7 +41,7 @@ class BoardsViewController: UIViewController,UITableViewDelegate,UITableViewData
     // Right bar item
     @objc func addRightBarItem() -> Void {
         let rightBarItem = UIBarButtonItem.init(image: UIImage.init(named: "add"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(rightBarItemPressed))
-        self.navigationItem.rightBarButtonItem = rightBarItem
+         self.navigationController?.topViewController?.navigationItem.rightBarButtonItem = rightBarItem
     }
     
     @objc func rightBarItemPressed(){

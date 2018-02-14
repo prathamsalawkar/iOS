@@ -38,7 +38,7 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     @objc func rightBarItemPressed(){
-        
+          self.performSegue(withIdentifier: "createTask", sender: self)
     }
     
     // Tableview datasource and delegate
