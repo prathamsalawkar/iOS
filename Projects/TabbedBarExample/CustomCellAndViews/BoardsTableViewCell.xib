@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BoardsTableViewCell" rowHeight="186" id="KGk-i7-Jjw" customClass="BoardsTableViewCell" customModule="TabbedBarExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="496" height="186"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="496" height="185.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G28-5k-jXw">
+                        <rect key="frame" x="7" y="7" width="482" height="171.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ID6-fb-Osv">
+                                <rect key="frame" x="5" y="5" width="472" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.7843137255" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="00A-gl-EHa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiX-cr-de8">
+                                <rect key="frame" x="5" y="46" width="472" height="79"/>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.4549019608" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="Nod-h6-KNg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWD-9a-Fip">
+                                <rect key="frame" x="320" y="130" width="157" height="36.5"/>
+                                <color key="backgroundColor" red="0.31372549020000001" green="0.69019607839999997" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="mzB-tW-vpa"/>
+                                </constraints>
+                                <state key="normal" title="Archive"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92935490610000004" green="0.33393192739999999" blue="0.29996933840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ID6-fb-Osv" firstAttribute="top" secondItem="G28-5k-jXw" secondAttribute="top" constant="5" id="HVg-b3-KPz"/>
+                            <constraint firstAttribute="trailing" secondItem="MWD-9a-Fip" secondAttribute="trailing" constant="5" id="MRe-b2-7Ke"/>
+                            <constraint firstItem="ID6-fb-Osv" firstAttribute="leading" secondItem="G28-5k-jXw" secondAttribute="leading" constant="5" id="QCY-QK-tA2"/>
+                            <constraint firstItem="MWD-9a-Fip" firstAttribute="top" secondItem="oiX-cr-de8" secondAttribute="bottom" constant="5" id="QTb-tx-af3"/>
+                            <constraint firstAttribute="bottom" secondItem="MWD-9a-Fip" secondAttribute="bottom" constant="5" id="Y7s-YO-VOW"/>
+                            <constraint firstAttribute="trailing" secondItem="oiX-cr-de8" secondAttribute="trailing" constant="5" id="kKV-ae-SU9"/>
+                            <constraint firstItem="oiX-cr-de8" firstAttribute="top" secondItem="ID6-fb-Osv" secondAttribute="bottom" constant="5" id="o0m-bA-Odh"/>
+                            <constraint firstItem="oiX-cr-de8" firstAttribute="leading" secondItem="G28-5k-jXw" secondAttribute="leading" constant="5" id="rT6-2c-w9B"/>
+                            <constraint firstAttribute="trailing" secondItem="ID6-fb-Osv" secondAttribute="trailing" constant="5" id="wde-oW-gyw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="G28-5k-jXw" secondAttribute="bottom" constant="7" id="02o-xJ-BAE"/>
+                    <constraint firstItem="G28-5k-jXw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="Yrz-2x-wPa"/>
+                    <constraint firstItem="G28-5k-jXw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="aKt-9q-4I7"/>
+                    <constraint firstAttribute="trailing" secondItem="G28-5k-jXw" secondAttribute="trailing" constant="7" id="yOq-Q3-WJh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="122" y="125"/>
+        </tableViewCell>
+    </objects>
+</document>
