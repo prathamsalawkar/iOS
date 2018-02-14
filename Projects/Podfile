@@ -6,6 +6,7 @@ target 'TabbedBarExample' do
   use_frameworks!
 
   # Pods for TabbedBarExample
+    pod 'Alamofire', '~> 4.5'
 
   target 'TabbedBarExampleTests' do
     inherit! :search_paths
