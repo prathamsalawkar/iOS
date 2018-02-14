@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09EFD0D9D7EE913636FA0740 /* Pods_TabbedBarExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B98CC0D5050E5BA525DCF4 /* Pods_TabbedBarExampleUITests.framework */; };
 		0A2B5CE92034CBAE000D7B72 /* AddBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE12034CBAD000D7B72 /* AddBoardViewController.swift */; };
 		0A2B5CEA2034CBAE000D7B72 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE22034CBAD000D7B72 /* AddTaskViewController.swift */; };
 		0A2B5CEB2034CBAE000D7B72 /* BoardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE32034CBAD000D7B72 /* BoardsViewController.swift */; };
@@ -20,6 +21,8 @@
 		0A2B5D542034DCB2000D7B72 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5D532034DCB2000D7B72 /* ListModel.swift */; };
 		0A2B5D562034DCC3000D7B72 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5D552034DCC3000D7B72 /* TaskModel.swift */; };
 		0A2B5D582034E309000D7B72 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0A2B5D572034E309000D7B72 /* Podfile */; };
+		12EDFD9963AF67F431FA615B /* Pods_TabbedBarExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752226617AFA727204019385 /* Pods_TabbedBarExampleTests.framework */; };
+		3E3CCAFCE31DF8CD8ACBDA00 /* Pods_TabbedBarExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C891C426D773B177BA811DE9 /* Pods_TabbedBarExample.framework */; };
 		77943695202E427A00E77B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77943694202E427A00E77B71 /* Assets.xcassets */; };
 		779436A3202E427B00E77B71 /* TabbedBarExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779436A2202E427B00E77B71 /* TabbedBarExampleTests.swift */; };
 		779436AE202E427B00E77B71 /* TabbedBarExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779436AD202E427B00E77B71 /* TabbedBarExampleUITests.swift */; };
@@ -69,6 +72,9 @@
 		0A2B5D532034DCB2000D7B72 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		0A2B5D552034DCC3000D7B72 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		0A2B5D572034E309000D7B72 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		3E24F90BEAA8282550B16480 /* Pods-TabbedBarExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbedBarExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabbedBarExampleTests/Pods-TabbedBarExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5D53225D356876CA3465A661 /* Pods-TabbedBarExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbedBarExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabbedBarExampleUITests/Pods-TabbedBarExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		752226617AFA727204019385 /* Pods_TabbedBarExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabbedBarExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77943688202E427A00E77B71 /* TabbedBarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbedBarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77943694202E427A00E77B71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77943699202E427A00E77B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +97,12 @@
 		779436DA202E49DA00E77B71 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		779436DD202E4A0300E77B71 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		779436DF202E4A1500E77B71 /* TaskDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskDetailView.xib; sourceTree = "<group>"; };
+		9D1E8B559EA91588BC2AF2D3 /* Pods-TabbedBarExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbedBarExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabbedBarExampleUITests/Pods-TabbedBarExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A2B98CC0D5050E5BA525DCF4 /* Pods_TabbedBarExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabbedBarExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBCE47BBEF34ADE1FE3AA9EF /* Pods-TabbedBarExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbedBarExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabbedBarExample/Pods-TabbedBarExample.release.xcconfig"; sourceTree = "<group>"; };
+		C891C426D773B177BA811DE9 /* Pods_TabbedBarExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabbedBarExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1C986E3CE903364FE3F17A6 /* Pods-TabbedBarExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbedBarExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabbedBarExample/Pods-TabbedBarExample.debug.xcconfig"; sourceTree = "<group>"; };
+		E2C15FB52B0038FB0C44E6F1 /* Pods-TabbedBarExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbedBarExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabbedBarExampleTests/Pods-TabbedBarExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E3CCAFCE31DF8CD8ACBDA00 /* Pods_TabbedBarExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12EDFD9963AF67F431FA615B /* Pods_TabbedBarExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09EFD0D9D7EE913636FA0740 /* Pods_TabbedBarExampleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +180,29 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		19F1926EF882326F4E29453E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1C986E3CE903364FE3F17A6 /* Pods-TabbedBarExample.debug.xcconfig */,
+				BBCE47BBEF34ADE1FE3AA9EF /* Pods-TabbedBarExample.release.xcconfig */,
+				3E24F90BEAA8282550B16480 /* Pods-TabbedBarExampleTests.debug.xcconfig */,
+				E2C15FB52B0038FB0C44E6F1 /* Pods-TabbedBarExampleTests.release.xcconfig */,
+				9D1E8B559EA91588BC2AF2D3 /* Pods-TabbedBarExampleUITests.debug.xcconfig */,
+				5D53225D356876CA3465A661 /* Pods-TabbedBarExampleUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		68E6F5D9428E6445C117BC3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C891C426D773B177BA811DE9 /* Pods_TabbedBarExample.framework */,
+				752226617AFA727204019385 /* Pods_TabbedBarExampleTests.framework */,
+				A2B98CC0D5050E5BA525DCF4 /* Pods_TabbedBarExampleUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7794367F202E427A00E77B71 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +211,8 @@
 				779436A1202E427B00E77B71 /* TabbedBarExampleTests */,
 				779436AC202E427B00E77B71 /* TabbedBarExampleUITests */,
 				77943689202E427A00E77B71 /* Products */,
+				19F1926EF882326F4E29453E /* Pods */,
+				68E6F5D9428E6445C117BC3B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,9 +310,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 779436B2202E427B00E77B71 /* Build configuration list for PBXNativeTarget "TabbedBarExample" */;
 			buildPhases = (
+				C9BB86EE3DCBF67BE9F61E24 /* [CP] Check Pods Manifest.lock */,
 				77943684202E427A00E77B71 /* Sources */,
 				77943685202E427A00E77B71 /* Frameworks */,
 				77943686202E427A00E77B71 /* Resources */,
+				6782E4648F59FF5FF8768B57 /* [CP] Embed Pods Frameworks */,
+				D319A6BCB06051AC641A19E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -287,9 +330,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 779436B5202E427B00E77B71 /* Build configuration list for PBXNativeTarget "TabbedBarExampleTests" */;
 			buildPhases = (
+				9F0BDA263157B80E0BFEC6DF /* [CP] Check Pods Manifest.lock */,
 				7794369A202E427B00E77B71 /* Sources */,
 				7794369B202E427B00E77B71 /* Frameworks */,
 				7794369C202E427B00E77B71 /* Resources */,
+				3600A73A9E8B9CEC70A00E89 /* [CP] Embed Pods Frameworks */,
+				014B0BB422B24DEDDBC01C66 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -305,9 +351,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 779436B8202E427B00E77B71 /* Build configuration list for PBXNativeTarget "TabbedBarExampleUITests" */;
 			buildPhases = (
+				89BD3F10260CDA923B07CBF6 /* [CP] Check Pods Manifest.lock */,
 				779436A5202E427B00E77B71 /* Sources */,
 				779436A6202E427B00E77B71 /* Frameworks */,
 				779436A7202E427B00E77B71 /* Resources */,
+				145D2763D204C252E526A626 /* [CP] Embed Pods Frameworks */,
+				B79E78BC01B1206BCAD107C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -395,6 +444,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		014B0BB422B24DEDDBC01C66 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabbedBarExampleTests/Pods-TabbedBarExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		145D2763D204C252E526A626 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabbedBarExampleUITests/Pods-TabbedBarExampleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3600A73A9E8B9CEC70A00E89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabbedBarExampleTests/Pods-TabbedBarExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6782E4648F59FF5FF8768B57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TabbedBarExample/Pods-TabbedBarExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabbedBarExample/Pods-TabbedBarExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89BD3F10260CDA923B07CBF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TabbedBarExampleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F0BDA263157B80E0BFEC6DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TabbedBarExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B79E78BC01B1206BCAD107C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabbedBarExampleUITests/Pods-TabbedBarExampleUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9BB86EE3DCBF67BE9F61E24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TabbedBarExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D319A6BCB06051AC641A19E9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabbedBarExample/Pods-TabbedBarExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77943684202E427A00E77B71 /* Sources */ = {

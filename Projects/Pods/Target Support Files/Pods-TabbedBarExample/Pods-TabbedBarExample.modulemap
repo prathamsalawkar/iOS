@@ -1,0 +1,6 @@
+framework module Pods_TabbedBarExample {
+  umbrella header "Pods-TabbedBarExample-umbrella.h"
+
+  export *
+  module * { export * }
+}
