@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,8 +23,8 @@
                         <rect key="frame" x="7" y="7" width="482" height="171.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ID6-fb-Osv">
-                                <rect key="frame" x="5" y="5" width="472" height="36"/>
-                                <color key="backgroundColor" red="1" green="0.7843137255" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="5" y="68" width="472" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="00A-gl-EHa"/>
                                 </constraints>
@@ -32,35 +32,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiX-cr-de8">
-                                <rect key="frame" x="5" y="46" width="472" height="79"/>
-                                <color key="backgroundColor" red="0.21176470589999999" green="0.4549019608" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="79" id="Nod-h6-KNg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWD-9a-Fip">
-                                <rect key="frame" x="320" y="130" width="157" height="36.5"/>
-                                <color key="backgroundColor" red="0.31372549020000001" green="0.69019607839999997" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="157" id="mzB-tW-vpa"/>
-                                </constraints>
-                                <state key="normal" title="Archive"/>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.92935490610000004" green="0.33393192739999999" blue="0.29996933840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.83782331239999996" green="0.89953448970000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ID6-fb-Osv" firstAttribute="top" secondItem="G28-5k-jXw" secondAttribute="top" constant="5" id="HVg-b3-KPz"/>
-                            <constraint firstAttribute="trailing" secondItem="MWD-9a-Fip" secondAttribute="trailing" constant="5" id="MRe-b2-7Ke"/>
                             <constraint firstItem="ID6-fb-Osv" firstAttribute="leading" secondItem="G28-5k-jXw" secondAttribute="leading" constant="5" id="QCY-QK-tA2"/>
-                            <constraint firstItem="MWD-9a-Fip" firstAttribute="top" secondItem="oiX-cr-de8" secondAttribute="bottom" constant="5" id="QTb-tx-af3"/>
-                            <constraint firstAttribute="bottom" secondItem="MWD-9a-Fip" secondAttribute="bottom" constant="5" id="Y7s-YO-VOW"/>
-                            <constraint firstAttribute="trailing" secondItem="oiX-cr-de8" secondAttribute="trailing" constant="5" id="kKV-ae-SU9"/>
-                            <constraint firstItem="oiX-cr-de8" firstAttribute="top" secondItem="ID6-fb-Osv" secondAttribute="bottom" constant="5" id="o0m-bA-Odh"/>
-                            <constraint firstItem="oiX-cr-de8" firstAttribute="leading" secondItem="G28-5k-jXw" secondAttribute="leading" constant="5" id="rT6-2c-w9B"/>
+                            <constraint firstItem="ID6-fb-Osv" firstAttribute="centerY" secondItem="G28-5k-jXw" secondAttribute="centerY" id="ipz-xi-o0E"/>
                             <constraint firstAttribute="trailing" secondItem="ID6-fb-Osv" secondAttribute="trailing" constant="5" id="wde-oW-gyw"/>
                         </constraints>
                     </view>
@@ -74,6 +50,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="uiLblTitle" destination="ID6-fb-Osv" id="j4m-Nz-44g"/>
+            </connections>
             <point key="canvasLocation" x="122" y="125"/>
         </tableViewCell>
     </objects>

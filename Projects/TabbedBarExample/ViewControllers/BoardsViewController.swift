@@ -12,11 +12,20 @@ class BoardsViewController: UIViewController,UITableViewDelegate,UITableViewData
 {
     let kBOARDS_TABLECELL_IDENTIFIER = "BoardsTableViewCell"
     @IBOutlet weak var uiTableView: UITableView!
+    let boardNames:NSArray = NSArray.init(objects: "iOS","Android","Web","Kindle")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         uiTableView.register(UINib.init(nibName: "BoardsTableViewCell", bundle: nil), forCellReuseIdentifier:kBOARDS_TABLECELL_IDENTIFIER )
+        uiTableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        addRightBarItem()
         // Do any additional setup after loading the view.
+    }
+    
+     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.title = "Boards"
+        self.navigationController?.navigationBar.backgroundColor = UIColor.blue
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,8 +33,20 @@ class BoardsViewController: UIViewController,UITableViewDelegate,UITableViewData
         // Dispose of any resources that can be recreated.
     }
     
+    // Right bar item
+    @objc func addRightBarItem() -> Void {
+        let rightBarItem = UIBarButtonItem.init(image: UIImage.init(named: "add"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(rightBarItemPressed))
+        self.navigationItem.rightBarButtonItem = rightBarItem
+    }
+    
+    @objc func rightBarItemPressed(){
+        
+    }
+    
+    
+    // Tableview datasource and delegate
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,11 +57,12 @@ class BoardsViewController: UIViewController,UITableViewDelegate,UITableViewData
         let boardsTableViewCell:BoardsTableViewCell = tableView.dequeueReusableCell(withIdentifier: kBOARDS_TABLECELL_IDENTIFIER, for: indexPath) as! BoardsTableViewCell
    
         boardsTableViewCell.selectionStyle = UITableViewCellSelectionStyle.none
+        boardsTableViewCell.uiLblTitle.text = boardNames.object(at: indexPath.row) as! String
         return boardsTableViewCell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 70
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

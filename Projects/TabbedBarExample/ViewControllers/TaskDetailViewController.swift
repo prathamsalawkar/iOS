@@ -18,6 +18,8 @@ class TaskDetailViewController: UIViewController
         super.viewDidLoad()
         taskDetailView = Bundle.main.loadNibNamed("TaskDetailView", owner: self, options: nil)![0] as?  TaskDetailView
         // Do any additional setup after loading the view.
+        taskDetailView?.frame.origin.y += 60
+        taskDetailView?.frame.size.width = self.view.frame.size.width
         self.view.addSubview(taskDetailView!)
     }
 
@@ -26,6 +28,10 @@ class TaskDetailViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = "Task Detail"
+    }
 
     /*
     // MARK: - Navigation
