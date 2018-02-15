@@ -10,6 +10,12 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var txtInputPassword: UITextField!
+    @IBOutlet weak var txtInputUsername: UITextField!
+    
+    @IBOutlet weak var btnLogin: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,9 +33,34 @@ class LoginViewController: UIViewController {
         self.navigationController?.navigationBar.backgroundColor = UIColor.blue
     }
     
-
+    @IBAction func didEndEditing(_ sender: Any) {
+        if(txtInputPassword.text != "" && txtInputUsername.text != ""){
+            btnLogin.isEnabled = true
+            btnLogin.alpha = 1
+        }else{
+            btnLogin.isEnabled = false
+            btnLogin.alpha = 0.5
+        }
+    }
+    
     @IBAction func performLogin(_ sender: Any) {
-        self.performSegue(withIdentifier: "showFromLoginSegue", sender: self)
+        let param:NSMutableDictionary = NSMutableDictionary()
+ 
+        param.setValue(txtInputUsername.text, forKey: "username")
+        param.setValue(txtInputPassword.text, forKey: "password")
+        
+        APIManager.sharedInstance.alamofireFunction(urlString: "user/login", method: .post, paramters: param as! [String : AnyObject]) { (response, message, success) in
+            
+            let uiAlertController =   UIAlertController.init(title: "Response", message: message, preferredStyle: UIAlertControllerStyle.alert)
+            self.present(uiAlertController, animated: true, completion: nil)
+            
+            if(success){
+                self.performSegue(withIdentifier: "showFromLoginSegue", sender: self)
+            }
+            
+        }
+        
+        
     }
     
     @IBAction func performRegister(_ sender: Any) {

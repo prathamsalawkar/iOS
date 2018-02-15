@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09EFD0D9D7EE913636FA0740 /* Pods_TabbedBarExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B98CC0D5050E5BA525DCF4 /* Pods_TabbedBarExampleUITests.framework */; };
+		0A1FD0852034F62E0096FD08 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1FD0862034F62E0096FD08 /* Alamofire.framework */; };
 		0A2B5CE92034CBAE000D7B72 /* AddBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE12034CBAD000D7B72 /* AddBoardViewController.swift */; };
 		0A2B5CEA2034CBAE000D7B72 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE22034CBAD000D7B72 /* AddTaskViewController.swift */; };
 		0A2B5CEB2034CBAE000D7B72 /* BoardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE32034CBAD000D7B72 /* BoardsViewController.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A1FD0862034F62E0096FD08 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A2B5CE12034CBAD000D7B72 /* AddBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBoardViewController.swift; sourceTree = "<group>"; };
 		0A2B5CE22034CBAD000D7B72 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		0A2B5CE32034CBAD000D7B72 /* BoardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardsViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A1FD0852034F62E0096FD08 /* Alamofire.framework in Frameworks */,
 				3E3CCAFCE31DF8CD8ACBDA00 /* Pods_TabbedBarExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,6 +199,7 @@
 		68E6F5D9428E6445C117BC3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A1FD0862034F62E0096FD08 /* Alamofire.framework */,
 				C891C426D773B177BA811DE9 /* Pods_TabbedBarExample.framework */,
 				752226617AFA727204019385 /* Pods_TabbedBarExampleTests.framework */,
 				A2B98CC0D5050E5BA525DCF4 /* Pods_TabbedBarExampleUITests.framework */,
@@ -764,6 +768,7 @@
 		};
 		779436B3202E427B00E77B71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1C986E3CE903364FE3F17A6 /* Pods-TabbedBarExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -779,6 +784,7 @@
 		};
 		779436B4202E427B00E77B71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBCE47BBEF34ADE1FE3AA9EF /* Pods-TabbedBarExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -794,6 +800,7 @@
 		};
 		779436B6202E427B00E77B71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E24F90BEAA8282550B16480 /* Pods-TabbedBarExampleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -811,6 +818,7 @@
 		};
 		779436B7202E427B00E77B71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2C15FB52B0038FB0C44E6F1 /* Pods-TabbedBarExampleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -828,6 +836,7 @@
 		};
 		779436B9202E427B00E77B71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D1E8B559EA91588BC2AF2D3 /* Pods-TabbedBarExampleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -844,6 +853,7 @@
 		};
 		779436BA202E427B00E77B71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D53225D356876CA3465A661 /* Pods-TabbedBarExampleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

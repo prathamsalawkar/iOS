@@ -323,12 +323,18 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="didEndEditing:" destination="N49-1G-fZ1" eventType="editingDidEnd" id="WBl-gb-DaS"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QtF-G2-l6J">
                                                 <rect key="frame" x="103" y="86" width="192" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="didEndEditing:" destination="N49-1G-fZ1" eventType="editingDidEnd" id="IHH-I2-cGs"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -347,7 +353,7 @@
                                             <constraint firstItem="jIB-iV-ZqD" firstAttribute="top" secondItem="qpb-ZO-1zP" secondAttribute="bottom" constant="20" id="oEp-L8-vqN"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFC-V6-Wlm">
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFC-V6-Wlm">
                                         <rect key="frame" x="135" y="401" width="105" height="41"/>
                                         <color key="backgroundColor" red="1" green="0.70212451370826179" blue="0.1778500573635271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -400,6 +406,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="NNy-zs-s9S"/>
                     <connections>
+                        <outlet property="btnLogin" destination="fFC-V6-Wlm" id="jQY-vm-uaf"/>
+                        <outlet property="txtInputPassword" destination="QtF-G2-l6J" id="WGT-HV-289"/>
+                        <outlet property="txtInputUsername" destination="I4w-BO-fGv" id="Joj-hU-spB"/>
                         <segue destination="JoT-rs-DB1" kind="show" identifier="registerSegue" id="eJq-3L-RW8"/>
                         <segue destination="49e-Tb-3d3" kind="show" identifier="showFromLoginSegue" id="KDe-ma-0Cd"/>
                     </connections>
@@ -747,7 +756,6 @@
         <!--Add Task View Controller-->
         <scene sceneID="yk6-rO-du7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eZN-xc-m6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="her-f8-DPP" customClass="AddTaskViewController" customModule="TabbedBarExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ERo-dX-srU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -810,6 +818,7 @@
                         <viewLayoutGuide key="safeArea" id="MZr-hn-Muo"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZN-xc-m6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1444" y="-1704"/>
         </scene>
