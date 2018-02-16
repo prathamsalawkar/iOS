@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var txtInputPassword: UITextField!
     @IBOutlet weak var txtInputUsername: UITextField!
@@ -18,7 +18,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.performSegue(withIdentifier: "showFromLoginSegue", sender: self)
+        self.txtInputUsername.delegate = self
+        self.txtInputPassword.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -31,6 +33,11 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.title = "Login"
         self.navigationController?.navigationBar.backgroundColor = UIColor.blue
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @IBAction func didEndEditing(_ sender: Any) {
@@ -49,18 +56,26 @@ class LoginViewController: UIViewController {
         param.setValue(txtInputUsername.text, forKey: "username")
         param.setValue(txtInputPassword.text, forKey: "password")
         
-        APIManager.sharedInstance.alamofireFunction(urlString: "user/login", method: .post, paramters: param as! [String : AnyObject]) { (response, message, success) in
-            
-            let uiAlertController =   UIAlertController.init(title: "Response", message: message, preferredStyle: UIAlertControllerStyle.alert)
-            self.present(uiAlertController, animated: true, completion: nil)
-            
-            if(success){
-                self.performSegue(withIdentifier: "showFromLoginSegue", sender: self)
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
+        APIManager.sharedInstance.alamofireFunction(urlString: "users/login", method: .post, paramters: param as! [String : AnyObject]) { (response, message, success) in
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            if(!success) {
+                let uiAlertController =   UIAlertController.init(title: "Response", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                let cancelAction = UIAlertAction(title: "OK",
+                                                 style: .cancel, handler: nil)
+                
+                uiAlertController.addAction(cancelAction)
+                self.present(uiAlertController, animated: true, completion: nil)
             }
-            
+            if(success){
+                DispatchQueue.main.async {
+                    print("This is run on the main queue, after the previous code in outer block")
+                    UserDefaults.standard.set(response!["id"]!, forKey: "user_id")
+                    self.performSegue(withIdentifier: "showFromLoginSegue", sender: self)
+                }
+            }
         }
-        
-        
     }
     
     @IBAction func performRegister(_ sender: Any) {

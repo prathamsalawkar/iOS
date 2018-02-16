@@ -19,6 +19,8 @@ class APIManager: NSObject {
     }
     
     public static let sharedInstance = APIManager()
+    
+    var selectedTask:[String:AnyObject] = [:]
 
     //MARK :- Post
     func postWebService(urlString: String, params: [String : AnyObject], completion : @escaping (_ response : AnyObject?, _ message: String?, _ success : Bool)-> Void) {

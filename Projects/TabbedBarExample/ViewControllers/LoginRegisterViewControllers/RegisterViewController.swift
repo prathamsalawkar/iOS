@@ -31,6 +31,31 @@ class RegisterViewController: UIViewController {
         self.performSegue(withIdentifier: "showFromRegisterSegue", sender: self)
     }
     
+    func performRegistration()
+    {
+        let param:NSMutableDictionary = NSMutableDictionary()
+        
+//        param.setValue(txtInputUsername.text, forKey: "username")
+        
+        APIManager.sharedInstance.alamofireFunction(urlString: "users/register", method: .post, paramters: param as! [String : AnyObject]) { (response, message, success) in
+            
+            if(!success) {
+                let uiAlertController =   UIAlertController.init(title: "Response", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                let cancelAction = UIAlertAction(title: "OK",
+                                                 style: .cancel, handler: nil)
+                
+                uiAlertController.addAction(cancelAction)
+                self.present(uiAlertController, animated: true, completion: nil)
+            }
+            if(success){
+                DispatchQueue.main.async {
+                    print("This is run on the main queue, after the previous code in outer block")
+                    self.performSegue(withIdentifier: "showFromLoginSegue", sender: self)
+                }
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

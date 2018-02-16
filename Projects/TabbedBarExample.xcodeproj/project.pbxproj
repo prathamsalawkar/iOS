@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09A0DB412035EAA100D7EC28 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A0DB402035EAA100D7EC28 /* TaskTableViewCell.swift */; };
 		09EFD0D9D7EE913636FA0740 /* Pods_TabbedBarExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B98CC0D5050E5BA525DCF4 /* Pods_TabbedBarExampleUITests.framework */; };
 		0A1FD0852034F62E0096FD08 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1FD0862034F62E0096FD08 /* Alamofire.framework */; };
 		0A2B5CE92034CBAE000D7B72 /* AddBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5CE12034CBAD000D7B72 /* AddBoardViewController.swift */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09A0DB402035EAA100D7EC28 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		0A1FD0862034F62E0096FD08 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A2B5CE12034CBAD000D7B72 /* AddBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBoardViewController.swift; sourceTree = "<group>"; };
 		0A2B5CE22034CBAD000D7B72 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				0A2B5CE32034CBAD000D7B72 /* BoardsViewController.swift */,
 				0A2B5CE42034CBAD000D7B72 /* ListViewController.swift */,
 				0A2B5CE52034CBAD000D7B72 /* TaskDetailViewController.swift */,
+				09A0DB402035EAA100D7EC28 /* TaskTableViewCell.swift */,
 			);
 			path = FirstTabBarViewControllers;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				779436D7202E498A00E77B71 /* BoardsTableViewCell.swift in Sources */,
 				779436CC202E490900E77B71 /* FifthViewController.swift in Sources */,
 				0A2B5CE92034CBAE000D7B72 /* AddBoardViewController.swift in Sources */,
+				09A0DB412035EAA100D7EC28 /* TaskTableViewCell.swift in Sources */,
 				0A2B5D522034DC9B000D7B72 /* BoardsModel.swift in Sources */,
 				0A2B5CED2034CBAE000D7B72 /* TaskDetailViewController.swift in Sources */,
 				779436DE202E4A0300E77B71 /* TaskDetailView.swift in Sources */,

@@ -12,7 +12,7 @@ class BoardsViewController: UIViewController,UITableViewDelegate,UITableViewData
 {
     let kBOARDS_TABLECELL_IDENTIFIER = "BoardsTableViewCell"
     @IBOutlet weak var uiTableView: UITableView!
-    let boardNames:NSArray = NSArray.init(objects: "iOS","Android","Web","Kindle")
+    let boardNames:NSMutableArray = NSMutableArray.init(objects: ["board_title":"Loading Boards..."])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +21,39 @@ class BoardsViewController: UIViewController,UITableViewDelegate,UITableViewData
         addRightBarItem()
         // Do any additional setup after loading the view.
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
+    }
+    
+    
+    func getBoards() {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        let user_id = UserDefaults.standard.integer(forKey: "user_id")
+        APIManager.sharedInstance.alamofireFunction(urlString: "boards/\(String(describing: user_id))", method: .get, paramters: [:]) { (response, message, success) in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            if(!success) {
+                let uiAlertController =   UIAlertController.init(title: "Response", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                let cancelAction = UIAlertAction(title: "OK",
+                                                 style: .cancel, handler: nil)
+                
+                uiAlertController.addAction(cancelAction)
+                self.present(uiAlertController, animated: true, completion: nil)
+            }
+            if(success){
+                DispatchQueue.main.async {
+                    print("This is run on the main queue, after the previous code in outer block")
+//                    let boards:BoardsModel =
+                    self.boardNames.removeAllObjects()
+                    self.boardNames.addObjects(from: response as! [Any])
+                    self.uiTableView.reloadData()
+                }
+            }
+        }
     }
     
      override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.topViewController?.title = "Boards";
+        getBoards()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,14 +83,15 @@ class BoardsViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return self.boardNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let boardsTableViewCell:BoardsTableViewCell = tableView.dequeueReusableCell(withIdentifier: kBOARDS_TABLECELL_IDENTIFIER, for: indexPath) as! BoardsTableViewCell
    
         boardsTableViewCell.selectionStyle = UITableViewCellSelectionStyle.none
-        boardsTableViewCell.uiLblTitle.text = boardNames.object(at: indexPath.row) as! String
+        let dict:[String:AnyObject] = (boardNames.object(at: indexPath.row) as! [String:AnyObject])
+        boardsTableViewCell.uiLblTitle.text = dict["board_title"] as? String
         return boardsTableViewCell
     }
     
@@ -71,6 +100,8 @@ class BoardsViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dict:[String:AnyObject] = (boardNames.object(at: indexPath.row) as! [String:AnyObject])
+        UserDefaults.standard.set(dict["id"]!, forKey: "board_id")
         self.performSegue(withIdentifier: "showList", sender: self)
     }
 }

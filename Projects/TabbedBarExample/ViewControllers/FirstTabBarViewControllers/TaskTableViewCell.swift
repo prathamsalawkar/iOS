@@ -1,18 +1,17 @@
 //
-//  ListTableViewCell.swift
+//  TaskTableViewCell.swift
 //  TabbedBarExample
 //
-//  Created by Prathamesh Salawkar on 10/02/18.
+//  Created by Vishal Dharmawat on 15/02/18.
 //  Copyright © 2018 Prathamesh Salawkar. All rights reserved.
 //
 
 import UIKit
 
-class ListTableViewCell: UITableViewCell {
+class TaskTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var lbltitle: UILabel!
-    @IBOutlet weak var lblDescription: UILabel!
-    @IBOutlet weak var create_date: UILabel!
+    @IBOutlet weak var cellKey: UILabel!
+    @IBOutlet weak var cellValue: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,5 +22,5 @@ class ListTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }
