@@ -30,6 +30,7 @@
 		0A81ED2920387FA10098EA43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A81ED2720387FA10098EA43 /* LaunchScreen.storyboard */; };
 		0A81ED2A20387FA10098EA43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A81ED2820387FA10098EA43 /* Main.storyboard */; };
 		0A81ED2F20388EAF0098EA43 /* CommonAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A81ED2E20388EAF0098EA43 /* CommonAlertManager.swift */; };
+		0A81ED302038B1C70098EA43 /* YouTubePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A81ED312038B1C70098EA43 /* YouTubePlayer.framework */; };
 		12EDFD9963AF67F431FA615B /* Pods_TabbedBarExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752226617AFA727204019385 /* Pods_TabbedBarExampleTests.framework */; };
 		3E3CCAFCE31DF8CD8ACBDA00 /* Pods_TabbedBarExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C891C426D773B177BA811DE9 /* Pods_TabbedBarExample.framework */; };
 		77943695202E427A00E77B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77943694202E427A00E77B71 /* Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		0A81ED2720387FA10098EA43 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A81ED2820387FA10098EA43 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0A81ED2E20388EAF0098EA43 /* CommonAlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAlertManager.swift; sourceTree = "<group>"; };
+		0A81ED312038B1C70098EA43 /* YouTubePlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouTubePlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E24F90BEAA8282550B16480 /* Pods-TabbedBarExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbedBarExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabbedBarExampleTests/Pods-TabbedBarExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D53225D356876CA3465A661 /* Pods-TabbedBarExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbedBarExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabbedBarExampleUITests/Pods-TabbedBarExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		752226617AFA727204019385 /* Pods_TabbedBarExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabbedBarExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A81ED302038B1C70098EA43 /* YouTubePlayer.framework in Frameworks */,
 				0A1FD0852034F62E0096FD08 /* Alamofire.framework in Frameworks */,
 				3E3CCAFCE31DF8CD8ACBDA00 /* Pods_TabbedBarExample.framework in Frameworks */,
 			);
@@ -253,6 +256,7 @@
 		68E6F5D9428E6445C117BC3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A81ED312038B1C70098EA43 /* YouTubePlayer.framework */,
 				0A1FD0862034F62E0096FD08 /* Alamofire.framework */,
 				C891C426D773B177BA811DE9 /* Pods_TabbedBarExample.framework */,
 				752226617AFA727204019385 /* Pods_TabbedBarExampleTests.framework */,
@@ -549,10 +553,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TabbedBarExample/Pods-TabbedBarExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

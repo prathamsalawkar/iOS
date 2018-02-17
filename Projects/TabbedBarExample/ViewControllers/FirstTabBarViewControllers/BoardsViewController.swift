@@ -47,7 +47,7 @@ class BoardsViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.topViewController?.title = "Boards";
+        self.navigationController?.topViewController?.title = "Boards"
         getBoards()
     }
     

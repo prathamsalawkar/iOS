@@ -17,38 +17,6 @@
             endingLineNumber = "52"
             landmarkName = "LoginViewController"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TabbedBarExample.LoginViewController.performLogin(Any) -&gt; ()"
-                  moduleName = "TabbedBarExample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/prathameshsalawkar/Documents/prathamsalawkarGIT/Projects/TabbedBarExample/ViewControllers/LoginRegisterViewControllers/LoginViewController.swift"
-                  timestampString = "540345358.01658"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "1351">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.AnyObject&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Bool) -&gt; () in TabbedBarExample.LoginViewController.performLogin(Any) -&gt; ()"
-                  moduleName = "TabbedBarExample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/prathameshsalawkar/Documents/prathamsalawkarGIT/Projects/TabbedBarExample/ViewControllers/LoginRegisterViewControllers/LoginViewController.swift"
-                  timestampString = "540345358.020366"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "63">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

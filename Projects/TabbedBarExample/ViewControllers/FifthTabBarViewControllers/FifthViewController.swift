@@ -12,16 +12,23 @@ class FifthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.topViewController?.navigationItem.rightBarButtonItem = nil
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+         self.navigationController?.topViewController?.title = "Settings"
     }
     
-
+    @IBAction func didTouchLogout(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func toggleNotification(_ sender: Any) {
+    }
+    
+    @IBAction func showProfile(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 
