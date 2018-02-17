@@ -30,46 +30,36 @@ class BoardsViewController: UIViewController,UITableViewDelegate,UITableViewData
         let user_id = UserDefaults.standard.integer(forKey: "user_id")
         APIManager.sharedInstance.alamofireFunction(urlString: "boards/\(String(describing: user_id))", method: .get, paramters: [:]) { (response, message, success) in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            if(!success) {
-                let uiAlertController =   UIAlertController.init(title: "Response", message: message, preferredStyle: UIAlertControllerStyle.alert)
-                let cancelAction = UIAlertAction(title: "OK",
-                                                 style: .cancel, handler: nil)
-                
-                uiAlertController.addAction(cancelAction)
-                self.present(uiAlertController, animated: true, completion: nil)
-            }
+            
             if(success){
                 DispatchQueue.main.async {
                     print("This is run on the main queue, after the previous code in outer block")
-//                    let boards:BoardsModel =
                     self.boardNames.removeAllObjects()
                     self.boardNames.addObjects(from: response as! [Any])
                     self.uiTableView.reloadData()
                 }
             }
+            else{
+                CommonAlertManager.sharedInstance.showCommonAlert(viewController: self, message: message!)
+            }
         }
     }
     
-     override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.topViewController?.title = "Boards";
         getBoards()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-       // self.navigationController?.navigationBar.topItem?.title = "Boards";
-      //  self.navigationController?.navigationBar.backgroundColor = UIColor.blue
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // self.navigationController?.navigationBar.topItem?.title = "Boards";
+        //  self.navigationController?.navigationBar.backgroundColor = UIColor.blue
     }
     
     // Right bar item
     @objc func addRightBarItem() -> Void {
         let rightBarItem = UIBarButtonItem.init(image: UIImage.init(named: "add"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(rightBarItemPressed))
-         self.navigationController?.topViewController?.navigationItem.rightBarButtonItem = rightBarItem
+        self.navigationController?.topViewController?.navigationItem.rightBarButtonItem = rightBarItem
     }
     
     @objc func rightBarItemPressed(){
@@ -88,7 +78,7 @@ class BoardsViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let boardsTableViewCell:BoardsTableViewCell = tableView.dequeueReusableCell(withIdentifier: kBOARDS_TABLECELL_IDENTIFIER, for: indexPath) as! BoardsTableViewCell
-   
+        
         boardsTableViewCell.selectionStyle = UITableViewCellSelectionStyle.none
         let dict:[String:AnyObject] = (boardNames.object(at: indexPath.row) as! [String:AnyObject])
         boardsTableViewCell.uiLblTitle.text = dict["board_title"] as? String

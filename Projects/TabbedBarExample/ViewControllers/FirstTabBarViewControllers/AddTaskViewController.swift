@@ -60,33 +60,19 @@ class AddTaskViewController: UIViewController,UITextFieldDelegate,UITextViewDele
         
         APIManager.sharedInstance.alamofireFunction(urlString: "task", method: .post, paramters: params) { (response, message, success) in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            if(!success) {
-                let uiAlertController =   UIAlertController.init(title: "Response", message: message, preferredStyle: UIAlertControllerStyle.alert)
-                let cancelAction = UIAlertAction(title: "OK",
-                                                 style: .cancel, handler: nil)
-                
-                uiAlertController.addAction(cancelAction)
-                self.present(uiAlertController, animated: true, completion: nil)
-            }
+        
             if(success){
                 DispatchQueue.main.async {
                     print("This is run on the main queue, after the previous code in outer block")
                     //                    let boards:BoardsModel =
                     self.navigationController?.popViewController(animated: true)
                 }
+            } else if(!success) {
+                CommonAlertManager.sharedInstance.showCommonAlert(viewController: self, message: message!)
             }
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+ 
 
 }

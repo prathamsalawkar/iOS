@@ -19,6 +19,11 @@ class TaskDetailViewController: UITableViewController,UITextFieldDelegate
         super.viewDidLoad()
         addRightBarItem()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = "Task Detail"
+    }
+    
     @objc func addRightBarItem() -> Void {
         let rightBarItem = UIBarButtonItem.init(image: UIImage.init(named: "add"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(rightBarItemPressed))
         self.navigationItem.rightBarButtonItem = rightBarItem
@@ -26,9 +31,30 @@ class TaskDetailViewController: UITableViewController,UITextFieldDelegate
     
     @objc func rightBarItemPressed(){
         self.view.endEditing(true)
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        requestAPICall()
+    }
+    
+    func requestAPICall() {
+        APIManager.sharedInstance.alamofireFunction(urlString: "task", method: .patch, paramters: getParamDict()) { (response, message, success) in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            
+            if(success){
+                DispatchQueue.main.async {
+                    print("This is run on the main queue, after the previous code in outer block")
+                    //                    let boards:BoardsModel =
+                    self.navigationController?.popViewController(animated: true)
+                }
+            } else if(!success) {
+                CommonAlertManager.sharedInstance.showCommonAlert(viewController: self, message: message!)
+            }
+        }
+    }
+
+    func getParamDict() -> Dictionary<String, AnyObject>
+    {
         print(APIManager.sharedInstance.selectedTask)
         
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let tdict = APIManager.sharedInstance.selectedTask
         var dict:[String:AnyObject] = [:]
         dict["task_id"] = tdict["id"]
@@ -42,37 +68,10 @@ class TaskDetailViewController: UITableViewController,UITextFieldDelegate
         
         print(dict)
         
-        APIManager.sharedInstance.alamofireFunction(urlString: "task", method: .patch, paramters: dict) { (response, message, success) in
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            if(!success) {
-                let uiAlertController =   UIAlertController.init(title: "Response", message: message, preferredStyle: UIAlertControllerStyle.alert)
-                let cancelAction = UIAlertAction(title: "OK",
-                                                 style: .cancel, handler: nil)
-                
-                uiAlertController.addAction(cancelAction)
-                self.present(uiAlertController, animated: true, completion: nil)
-            }
-            if(success){
-                DispatchQueue.main.async {
-                    print("This is run on the main queue, after the previous code in outer block")
-                    //                    let boards:BoardsModel =
-                    self.navigationController?.popViewController(animated: true)
-                }
-            }
-        }
-        
-        
+        return dict
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationItem.title = "Task Detail"
-    }
+  
+    // Table view datasource and delegate
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
@@ -159,15 +158,5 @@ class TaskDetailViewController: UITableViewController,UITextFieldDelegate
         }
         return cell;
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

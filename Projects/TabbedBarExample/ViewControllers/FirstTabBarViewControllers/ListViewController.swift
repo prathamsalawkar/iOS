@@ -23,20 +23,19 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         addRightBarItem()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = "LIST"
+        loadTasks()
+    }
+    
     func loadTasks() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let board_id = UserDefaults.standard.object(forKey: "board_id")
         let user_id = UserDefaults.standard.integer(forKey: "user_id")
         APIManager.sharedInstance.alamofireFunction(urlString: "task/\(board_id!)/\(user_id)", method: .get, paramters: [:]) { (response, message, success) in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            if(!success) {
-                let uiAlertController =   UIAlertController.init(title: "Response", message: message, preferredStyle: UIAlertControllerStyle.alert)
-                let cancelAction = UIAlertAction(title: "OK",
-                                                 style: .cancel, handler: nil)
-                
-                uiAlertController.addAction(cancelAction)
-                self.present(uiAlertController, animated: true, completion: nil)
-            }
+ 
             if(success){
                 DispatchQueue.main.async {
                     print("This is run on the main queue, after the previous code in outer block")
@@ -45,19 +44,10 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                     self.tasks.addObjects(from: response as! [Any])
                     self.uiTableView.reloadData()
                 }
+            } else if(!success) {
+                CommonAlertManager.sharedInstance.showCommonAlert(viewController: self, message: message!)
             }
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationItem.title = "LIST"
-        loadTasks()
     }
     
     // Right bar item
@@ -103,14 +93,5 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.performSegue(withIdentifier: "showTaskDetail", sender: self)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
