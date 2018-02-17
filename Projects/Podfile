@@ -8,6 +8,7 @@ target 'TabbedBarExample' do
   # Pods for TabbedBarExample
     pod 'Alamofire', '~> 4.5'
     pod 'YouTubePlayer'
+    pod 'DropDown'
 
   target 'TabbedBarExampleTests' do
     inherit! :search_paths

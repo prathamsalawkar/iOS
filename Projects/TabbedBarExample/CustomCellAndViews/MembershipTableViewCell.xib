@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MembershipTableViewCell" customModule="TabbedBarExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eys-au-crR">
+                        <rect key="frame" x="58" y="0.0" width="262" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jY1-jE-b54">
+                        <rect key="frame" x="8" y="0.0" width="34" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="34" id="5HN-Tb-uCT"/>
+                        </constraints>
+                        <state key="normal" image="first"/>
+                        <connections>
+                            <action selector="didTouchCheckBox:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9Bp-KT-KWh"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Eys-au-crR" firstAttribute="leading" secondItem="jY1-jE-b54" secondAttribute="trailing" constant="16" id="4Kb-iH-V4k"/>
+                    <constraint firstItem="Eys-au-crR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5nJ-Bp-efL"/>
+                    <constraint firstAttribute="bottom" secondItem="Eys-au-crR" secondAttribute="bottom" id="GuL-BT-opg"/>
+                    <constraint firstItem="jY1-jE-b54" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="arg-Iw-oVB"/>
+                    <constraint firstAttribute="bottom" secondItem="jY1-jE-b54" secondAttribute="bottom" id="pXg-hM-oQ3"/>
+                    <constraint firstItem="jY1-jE-b54" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="vba-C8-E7Z"/>
+                    <constraint firstAttribute="trailing" secondItem="Eys-au-crR" secondAttribute="trailing" id="z39-D0-oxK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="uiBtnCheckBox" destination="jY1-jE-b54" id="BcL-1A-d3S"/>
+                <outlet property="uiLblTitle" destination="Eys-au-crR" id="jln-Xp-uZq"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="first" width="30" height="30"/>
+    </resources>
+</document>

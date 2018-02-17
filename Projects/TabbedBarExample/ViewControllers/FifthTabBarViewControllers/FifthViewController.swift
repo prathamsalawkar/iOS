@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class FifthViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -19,15 +20,20 @@ class FifthViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
          self.navigationController?.topViewController?.title = "Settings"
     }
+    @IBAction func didTouchAddNewMember(_ sender: Any) {
+        self.performSegue(withIdentifier: "registerNewMember", sender: self)
+    }
     
     @IBAction func didTouchLogout(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func toggleNotification(_ sender: Any) {
+        
     }
     
-    @IBAction func showProfile(_ sender: Any) {
+    @IBAction func didTouchShowProfile(_ sender: Any) {
+        
     }
     /*
     // MARK: - Navigation

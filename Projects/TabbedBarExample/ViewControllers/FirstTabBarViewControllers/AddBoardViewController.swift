@@ -7,21 +7,31 @@
 //
 
 import UIKit
+import DropDown
 
 class AddBoardViewController: UIViewController,UITextFieldDelegate {
-
+    
     @IBOutlet weak var board_title: UITextField!
+    
+    @IBOutlet weak var uiDropDown: DropDown!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.board_title.delegate = self
-
+        
         // Do any additional setup after loading the view.
+        uiDropDown.dataSource =  ["Member 1", "Member 2", "Member 3"]
+      //  uiDropDown.bottomOffset = CGPoint(x: 0, y:(uiDropDown.anchorView?.plainView.bounds.height)!)
+        uiDropDown.dismissMode = .onTap
+    //    uiDropDown.cellNib = UINib(nibName: "MembershipTableViewCell", bundle: nil)
+       
+        
     }
- 
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         if textField.text != nil {
-          addNewBoard()
+            addNewBoard()
         }
         return true
     }
@@ -42,6 +52,6 @@ class AddBoardViewController: UIViewController,UITextFieldDelegate {
             }
         }
     }
- 
-
+    
+    
 }
