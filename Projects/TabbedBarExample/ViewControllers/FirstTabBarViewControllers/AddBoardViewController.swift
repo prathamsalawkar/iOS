@@ -117,8 +117,8 @@ class AddBoardViewController: UIViewController,UITextFieldDelegate,UITableViewDa
     
     func addNewBoard() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        let user_id = UserDefaults.standard.integer(forKey: "user_id")
-        APIManager.sharedInstance.alamofireFunction(urlString: "boards", method: .post, paramters: ["board_title":self.board_title.text! as String as AnyObject,"board_primaryowner":user_id as AnyObject]) { (response, message, success) in
+       
+        APIManager.sharedInstance.alamofireFunction(urlString: "boards", method: .post, paramters: getParam() as! [String : AnyObject]) { (response, message, success) in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
             
             if(success){
@@ -132,6 +132,15 @@ class AddBoardViewController: UIViewController,UITextFieldDelegate,UITableViewDa
         }
     }
     
+    
+    func getParam() -> NSMutableDictionary
+    {
+        let params = NSMutableDictionary()
+        let user_id = UserDefaults.standard.integer(forKey: "user_id")
+        params.setValue(self.board_title.text, forKey: "board_title")
+        params.setValue(user_id, forKey: "board_primaryowner")
+        return params
+    }
     
 //    func setupDropDown() {
 //        uiDropDown.anchorView = uiBtnAddUser

@@ -28,8 +28,8 @@ class BoardsViewController: UIViewController,UITableViewDelegate,UITableViewData
     func getBoards() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
      //   CommonLoaderViewController.sharedInstance.showLoader(viewController: self)
-        let user_id = UserDefaults.standard.integer(forKey: "user_id")
-        APIManager.sharedInstance.alamofireFunction(urlString: "boards/\(String(describing: user_id))", method: .get, paramters: [:]) { (response, message, success) in
+     //   let user_id = UserDefaults.standard.integer(forKey: "user_id")
+        APIManager.sharedInstance.alamofireFunction(urlString: "boards", method: .get, paramters: [:]) { (response, message, success) in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
          //   CommonLoaderViewController.sharedInstance.hideLoader()
             
