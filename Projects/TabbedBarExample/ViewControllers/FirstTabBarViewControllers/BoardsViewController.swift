@@ -12,7 +12,7 @@ class BoardsViewController: UIViewController,UITableViewDelegate,UITableViewData
 {
     let kBOARDS_TABLECELL_IDENTIFIER = "BoardsTableViewCell"
     @IBOutlet weak var uiTableView: UITableView!
-    let boardNames:NSMutableArray = NSMutableArray.init(objects: ["board_title":"Loading Boards..."])
+    let boardNames:NSMutableArray = NSMutableArray()//.init(objects: ["board_title":"Loading Boards..."])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +27,11 @@ class BoardsViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     func getBoards() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
+     //   CommonLoaderViewController.sharedInstance.showLoader(viewController: self)
         let user_id = UserDefaults.standard.integer(forKey: "user_id")
         APIManager.sharedInstance.alamofireFunction(urlString: "boards/\(String(describing: user_id))", method: .get, paramters: [:]) { (response, message, success) in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
+         //   CommonLoaderViewController.sharedInstance.hideLoader()
             
             if(success){
                 DispatchQueue.main.async {

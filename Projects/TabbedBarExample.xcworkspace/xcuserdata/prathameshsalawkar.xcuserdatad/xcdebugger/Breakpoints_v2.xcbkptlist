@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TabbedBarExample/ViewControllers/LoginRegisterViewControllers/LoginViewController.swift"
-            timestampString = "540345339.9314981"
+            timestampString = "540669927.2509511"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
@@ -26,12 +26,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TabbedBarExample/ViewControllers/LoginRegisterViewControllers/LoginViewController.swift"
-            timestampString = "540345339.9321851"
+            timestampString = "540669927.251047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
             endingLineNumber = "54"
             landmarkName = "performLogin(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TabbedBarExample/ViewControllers/FirstTabBarViewControllers/AddBoardViewController.swift"
+            timestampString = "540669994.310107"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "showAddMemberView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

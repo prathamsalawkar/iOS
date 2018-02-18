@@ -23,6 +23,9 @@
 		0A2B5D542034DCB2000D7B72 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5D532034DCB2000D7B72 /* ListModel.swift */; };
 		0A2B5D562034DCC3000D7B72 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B5D552034DCC3000D7B72 /* TaskModel.swift */; };
 		0A2B5D582034E309000D7B72 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0A2B5D572034E309000D7B72 /* Podfile */; };
+		0A74556A2039C61400B4776C /* CommonLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7455692039C61400B4776C /* CommonLoaderViewController.swift */; };
+		0A74556C203A04FB00B4776C /* AddUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A74556B203A04FA00B4776C /* AddUserModel.swift */; };
+		0A74556E203A052500B4776C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A74556D203A052500B4776C /* User.swift */; };
 		0A81ED2220387F760098EA43 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A81ED1B20387F750098EA43 /* FifthViewController.swift */; };
 		0A81ED2320387F760098EA43 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A81ED1D20387F750098EA43 /* SecondViewController.swift */; };
 		0A81ED2420387F760098EA43 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A81ED1F20387F750098EA43 /* ThirdViewController.swift */; };
@@ -81,6 +84,9 @@
 		0A2B5D532034DCB2000D7B72 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		0A2B5D552034DCC3000D7B72 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		0A2B5D572034E309000D7B72 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0A7455692039C61400B4776C /* CommonLoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLoaderViewController.swift; sourceTree = "<group>"; };
+		0A74556B203A04FA00B4776C /* AddUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserModel.swift; sourceTree = "<group>"; };
+		0A74556D203A052500B4776C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0A81ED1B20387F750098EA43 /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 		0A81ED1D20387F750098EA43 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		0A81ED1F20387F750098EA43 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -194,8 +200,18 @@
 				0A2B5D512034DC9B000D7B72 /* BoardsModel.swift */,
 				0A2B5D532034DCB2000D7B72 /* ListModel.swift */,
 				0A2B5D552034DCC3000D7B72 /* TaskModel.swift */,
+				0A74556B203A04FA00B4776C /* AddUserModel.swift */,
+				0A74556D203A052500B4776C /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0A7455682039C5F900B4776C /* CommonLoader */ = {
+			isa = PBXGroup;
+			children = (
+				0A7455692039C61400B4776C /* CommonLoaderViewController.swift */,
+			);
+			path = CommonLoader;
 			sourceTree = "<group>";
 		};
 		0A81ED1A20387F750098EA43 /* FifthTabBarViewControllers */ = {
@@ -299,6 +315,7 @@
 		7794368A202E427A00E77B71 /* TabbedBarExample */ = {
 			isa = PBXGroup;
 			children = (
+				0A7455682039C5F900B4776C /* CommonLoader */,
 				0A81ED2D20388EAF0098EA43 /* CommonAlert */,
 				0A81ED2620387FA10098EA43 /* Storyboards */,
 				0A2B5D502034DC67000D7B72 /* Models */,
@@ -334,12 +351,12 @@
 		779436C1202E490900E77B71 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0A81ED1A20387F750098EA43 /* FifthTabBarViewControllers */,
-				0A81ED2020387F760098EA43 /* FourthTabBarViewControllers */,
+				0A2B5CE62034CBAD000D7B72 /* LoginRegisterViewControllers */,
+				0A2B5CE02034CBAD000D7B72 /* FirstTabBarViewControllers */,
 				0A81ED1C20387F750098EA43 /* SecondTabBarViewControllers */,
 				0A81ED1E20387F750098EA43 /* ThirdTabBarViewControllers */,
-				0A2B5CE02034CBAD000D7B72 /* FirstTabBarViewControllers */,
-				0A2B5CE62034CBAD000D7B72 /* LoginRegisterViewControllers */,
+				0A81ED2020387F760098EA43 /* FourthTabBarViewControllers */,
+				0A81ED1A20387F750098EA43 /* FifthTabBarViewControllers */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -669,6 +686,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A74556E203A052500B4776C /* User.swift in Sources */,
 				0A81ED2220387F760098EA43 /* FifthViewController.swift in Sources */,
 				0A2B5CF22034CE4B000D7B72 /* APIManager.swift in Sources */,
 				0A81ED2420387F760098EA43 /* ThirdViewController.swift in Sources */,
@@ -676,6 +694,7 @@
 				0A2B5D542034DCB2000D7B72 /* ListModel.swift in Sources */,
 				0A81ED2320387F760098EA43 /* SecondViewController.swift in Sources */,
 				0A2B5D562034DCC3000D7B72 /* TaskModel.swift in Sources */,
+				0A74556C203A04FB00B4776C /* AddUserModel.swift in Sources */,
 				0A2B5CEE2034CBAE000D7B72 /* LoginViewController.swift in Sources */,
 				0A81ED2F20388EAF0098EA43 /* CommonAlertManager.swift in Sources */,
 				779436D1202E490900E77B71 /* AppDelegate.swift in Sources */,
@@ -689,6 +708,7 @@
 				0A2B5CED2034CBAE000D7B72 /* TaskDetailViewController.swift in Sources */,
 				779436DE202E4A0300E77B71 /* TaskDetailView.swift in Sources */,
 				0A81ED362038C5E80098EA43 /* MembershipTableViewCell.swift in Sources */,
+				0A74556A2039C61400B4776C /* CommonLoaderViewController.swift in Sources */,
 				0A2B5D4E2034D32B000D7B72 /* SwiftyJSON.swift in Sources */,
 				0A2B5CEA2034CBAE000D7B72 /* AddTaskViewController.swift in Sources */,
 				0A2B5CEB2034CBAE000D7B72 /* BoardsViewController.swift in Sources */,
